@@ -12,7 +12,8 @@ def divide(a, b):
 	return a / b
 
 def main():
-	while True:
+	again = True
+	while again == True:
 		num1 = float(input("enter first number: "))
 		operator = input("operator: ")
 		num2 = float(input("enter second number: "))
@@ -26,6 +27,9 @@ def main():
 			print("result:", divide(num1, num2))
 		else:
 			print("unknown operator:", operator)
+		choice = input("quit? y/n: ")
+		if choice == "y":
+			again = False
 
 if __name__ == "__main__":
 	main()
